@@ -1,7 +1,7 @@
 ## APIPractice
 # extensions required:
-sqlite
-REST Client (no need if you have postman)
+1. sqlite
+2. REST Client (no need if you have postman)
 
 for creating an API:
 1. create a model
