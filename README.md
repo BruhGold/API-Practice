@@ -1,5 +1,5 @@
 ## APIPractice
-# extensions required:
+extensions required:
 1. sqlite
 2. REST Client (no need if you have postman)
 
