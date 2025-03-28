@@ -1,0 +1,44 @@
+### Get new Token 
+# @name login
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+    "username": "ngo",
+    "password": "vippro123"
+}
+
+### Save the token as a variable
+@token = {{login.response.body.access}}
+@refresh_token = {{login.response.body.refresh}}
+
+### Get new Access Token
+# Test with token
+POST http://127.0.0.1:8000/api/token/refresh/
+Content-Type: application/json
+
+{
+    "refresh": "{{refresh_token}}"
+}
+### Post new question
+POST http://127.0.0.1:8000/api/questions/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "question_text": "What is 5+6?"
+}
+
+###
+# Update a question (PUT request)
+PUT http://127.0.0.1:8000/api/questions/1/
+Content-Type: application/json
+
+{
+    "question_text": "What is 5+6?"
+}
+
+###
+
+# Delete a question
+DELETE http://127.0.0.1:8000/api/questions/1/

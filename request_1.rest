@@ -1,0 +1,16 @@
+# Get all questions
+GET http://127.0.0.1:8000/api/questions/
+### (Three hashes separate different requests)
+
+# Get a specific question by ID
+GET http://127.0.0.1:8000/api/questions/1/
+
+###
+
+# Create a new question (POST request) this should fail without authentication
+POST http://127.0.0.1:8000/api/questions/
+Content-Type: application/json
+
+{
+    "question_text": "What is life?"
+}
