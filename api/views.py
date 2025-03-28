@@ -4,6 +4,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from .serializers import MyChoiceSerializer, MyQuestionSerializer
+from rest_framework.permissions import DjangoObjectPermissions, AllowAny
+
 
 from .models import Choice, Question
 
@@ -17,10 +19,18 @@ class choice_list(APIView):
         pass
 
 class questions_list(APIView):
+    def get_permissions(self):
+        if self.request.method == 'GET':
+            return [AllowAny()]
+        return [DjangoObjectPermissions()]
+
     def get(self, request):
         questions = Question.objects.all()
         serializer = MyQuestionSerializer(questions, many=True)
         return Response(serializer.data)
+    
+    def get_queryset(self):
+        return Question.objects.all()
 
     def post(self, request):
         data = request.data.copy()

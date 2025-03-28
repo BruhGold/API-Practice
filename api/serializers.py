@@ -8,6 +8,7 @@ class MyChoiceSerializer(serializers.ModelSerializer):
 
 class MyQuestionSerializer(serializers.ModelSerializer):
     choice_set = MyChoiceSerializer(many=True, required=False)
+    pub_date = serializers.DateTimeField(required=False)
     
     class Meta:
         model = Question
