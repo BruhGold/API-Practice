@@ -31,8 +31,9 @@ Authorization: Bearer {{token}}
 
 ###
 # Update a question (PUT request)
-PUT http://127.0.0.1:8000/api/questions/1/
+PUT http://127.0.0.1:8000/api/questions/6/
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
     "question_text": "What is 5+6?"
@@ -41,4 +42,4 @@ Content-Type: application/json
 ###
 
 # Delete a question
-DELETE http://127.0.0.1:8000/api/questions/1/
+DELETE http://127.0.0.1:8000/api/questions/2/

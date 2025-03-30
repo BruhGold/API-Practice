@@ -3,7 +3,7 @@ GET http://127.0.0.1:8000/api/questions/
 ### (Three hashes separate different requests)
 
 # Get a specific question by ID
-GET http://127.0.0.1:8000/api/questions/1/
+GET http://127.0.0.1:8000/api/questions/2/
 
 ###
 
