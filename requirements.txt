@@ -18,6 +18,4 @@ tzdata==2025.2
 djangorestframework
 djangorestframework-simplejwt
 requests
-
-
-
+cryptography
