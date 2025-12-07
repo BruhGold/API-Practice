@@ -2,8 +2,7 @@
 annotated-types==0.7.0
 anyio==4.11.0
 asgiref==3.11.0
-Django==5.2.8
-django-allauth
+django
 idna==3.11
 neo4j==6.0.3
 pydantic==2.12.5
@@ -18,4 +17,5 @@ tzdata==2025.2
 djangorestframework
 djangorestframework-simplejwt
 requests
+
 
